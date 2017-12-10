@@ -35,4 +35,4 @@ plt.figure(3)
 t=np.arange(0.,5.,0.2)
 #'r--'紅色虛線,'bs'藍色矩形,'g^'綠色三角形
 plt.plot(t,t,'r--',t,t**2,'bs',t,t**3,'g^')
-mpt.show
+plt.show
