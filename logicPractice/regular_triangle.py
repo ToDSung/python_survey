@@ -29,12 +29,32 @@ regularTriangleByMyself(judgeInput(5))
 """
 #輸入數字出現指定層數的等腰三角形
 
+def initializeTotalStars():
+    global TotalStars
+    TotalStars=0
+
+def countTotalStars(inputstars=0):
+    global TotalStars
+    TotalStars = TotalStars+inputstars
+    return TotalStars
+
+def showTotalStarsAndDeleteVariable():
+    global TotalStars
+    print('Totally star number is :' + repr(TotalStars))
+    del TotalStars
+
 def createRegularTriangle(number):
+    initializeTotalStars()
     for layer in range(1,number):
         for blank in range (1,number-layer):
             print(' ',end='')
         for stars in range (1,layer*2):
             print('+',end='')
+        countTotalStars(stars)
         print()
-        
-createRegularTriangle(10)
+    showTotalStarsAndDeleteVariable()
+    
+
+createRegularTriangle(20)
+
+
