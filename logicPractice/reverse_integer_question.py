@@ -52,10 +52,11 @@ def reverse(x):
         anwser =  '-' + ''.join(reverseStrX)
         return int(anwser)
 '''
-reverse2 is from network
+reverse2 is from network more clear code
+And there ia a different idea :
 the logic is a int number mod 10 will become the example under:
     9876 mod 10 =987 ... 6
-    and plus 6 to a []
+    and plus 6 to a list [] 
 '''
 def reverse2(x):
     """
@@ -66,9 +67,9 @@ def reverse2(x):
     if isNegative:
         x = x * -1
     
-    strX = str(x%10)
-    
-    print (strX)
+    xStr = str(x)
+    xStr = xStr[::-1]
+    x = int(xStr)
 
     if isNegative:
         x *= -1
