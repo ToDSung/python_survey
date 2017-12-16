@@ -51,5 +51,27 @@ def reverse(x):
         reverseStrX.reverse()
         anwser =  '-' + ''.join(reverseStrX)
         return int(anwser)
+'''
+reverse2 is from network
+the logic is a int number mod 10 will become the example under:
+    9876 mod 10 =987 ... 6
+    and plus 6 to a []
+'''
+def reverse2(x):
+    """
+    :type x: int
+    :rtype: int
+    """
+    isNegative = x < 0
+    if isNegative:
+        x = x * -1
     
-print(reverse(-56789))
+    strX = str(x%10)
+    
+    print (strX)
+
+    if isNegative:
+        x *= -1
+    return x    
+
+print(reverse2(-56789))
