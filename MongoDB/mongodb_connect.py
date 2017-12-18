@@ -80,3 +80,12 @@ cursor2 =collection.find({'name':'Anna'})
 
 for data2 in cursor2:
     print(data2)
+
+print()
+    
+collection.replace_one({'name':'Anna'},{'name':'Amy'})
+
+cursor3=collection.find()
+
+for data3 in cursor3:
+    print (data3)
