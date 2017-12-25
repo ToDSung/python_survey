@@ -12,7 +12,7 @@ import os
 
 finance=pd.read_csv('.\\out\\BABA.csv')
 '''
-#根據row index索引
+#根據row index索引 0~2XX
 df.loc[<indices_list>, <columns_list>]
 '''
 #輸出最後三筆
