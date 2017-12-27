@@ -13,14 +13,15 @@ import tensorflow as tf
 '''
 double dimension tensor
 '''
-
 # 1 * 2 的矩陣
 matrix1 = tf.constant([[3,3]])
 # 2 * 1 的矩陣
-matrix2 = tf.constant([[2],[2]])
+matrix2 = tf.constant([[2],
+                       [2]])
 # matmul 相乘
 product1 = tf.matmul(matrix1,matrix2)
 
+#Session 是一個object 首字大寫
 sess = tf.Session()
 print(sess.run(matrix1))
 print(sess.run(matrix2))
