@@ -73,6 +73,8 @@ def reverse2(x):
 
     if isNegative:
         x *= -1
-    return x    
-
+    if x > 2**31-1 or  x < -2**31:
+        return 0
+    else:
+        return x  
 print(reverse2(-56789))
